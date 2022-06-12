@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/carlmjohnson/gateway"
-	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
@@ -19,10 +18,10 @@ import (
 
 func main() {
 	
-	err := godotenv.Load(".env")
-	if err != nil {
-		return
-	}
+	// err := godotenv.Load(".env")
+	// if err != nil {
+	// 	return
+	// }
 	
 	listener := gateway.ListenAndServe
 	
