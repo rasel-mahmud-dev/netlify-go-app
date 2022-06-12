@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo document</title>
+</head>
+<body>
+  <h1>Demo of Netlify go and Mongodb</h1>
+
+  <div id="products"></div>
+
+  <script type="module">
+
+    (async () => {
+      let data = await fetch("/api/products").then(rsp => rsp.json());
+
+      let el = document.getElementById("products");
+      let ul = document.createElement("ul")
+      data.forEach(product=>{
+        let li = document.createElement("li")
+        li.innerText = product.title
+        ul.append(li)
+      })
+      el.append(ul);
+    })();
+  </script>
+</body>
+</html>

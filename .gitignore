@@ -1,0 +1,5 @@
+functions
+
+# Local Netlify folder
+.netlify
+.env
